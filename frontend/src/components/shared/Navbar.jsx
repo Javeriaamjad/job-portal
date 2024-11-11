@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Popover } from "../ui/popover";
 import { PopoverContent, PopoverTrigger } from "../ui/popover";
@@ -24,8 +23,9 @@ const Navbar = () => {
           </ul>
           {!user ? (
             <div className="flex items-center gap-2">
-              <Button variant="outline">Login</Button>
-              <Button className="bg-[#6A38C2] hover:bg-[#F83002]">SignUp</Button>
+              <Link to="/login"><Button variant="outline">Login</Button></Link>
+              <Link to="/signup"><Button className="bg-[#6A38C2] hover:bg-[#F83002]">SignUp</Button></Link>
+              
             </div>
           ) : (
             <Popover>
